@@ -65,3 +65,43 @@ dist
 .DS_Store
 .env
 ```
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+
+## 🌿 GitFlow Branch Strategy
+To maintain a structured workflow, we follow **GitFlow** for version control:
+
+### 📌 Branches:
+- **`main`** – Stable, production-ready code.
+- **`develop`** – Active development branch (merged into `main` upon release).
+- **`feature/{feature-name}`** – Individual features branched from `develop`.
+- **`release/{version}`** – Prepares a new release from `develop`, allowing final fixes before merging into `main`.
+- **`hotfix/{fix-name}`** – Critical fixes applied directly to `main`, then merged into `develop`.
+
+### 🚀 Workflow:
+1. **Starting a Feature:**
+   ```sh
+   git checkout develop
+   git checkout -b feature/{feature-name}
+   ```
+2. **Finishing a Feature:**
+   ```sh
+   git checkout develop
+   git merge feature/{feature-name}
+   git branch -d feature/{feature-name}
+   ```
+3. **Creating a Release:**
+   ```sh
+   git checkout develop
+   git checkout -b release/{version}
+   ```
+4. **Applying Hotfixes:**
+   ```sh
+   git checkout main
+   git checkout -b hotfix/{fix-name}
+   ```
+
+Following this structure ensures a clean and efficient development cycle! 🔥
