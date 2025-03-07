@@ -71,6 +71,20 @@ dist
 ----------------------------------------------------------------
 
 
+### View Errors in DevTools
+
+To see errors in localStorage, open the DevTools console and run:
+```
+console.log(JSON.parse(localStorage.getItem("errorLogs")));
+```
+
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+
+
 ## 🌿 GitFlow Branch Strategy
 To maintain a structured workflow, we follow **GitFlow** for version control:
 
