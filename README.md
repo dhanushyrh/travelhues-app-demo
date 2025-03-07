@@ -27,3 +27,41 @@ Follow us on social media and keep the wanderlust alive! 🌍✨
 🔗 *https://www.linkedin.com/company/travelhues*
 
 🚀 Ready to turn your travels into treasure? Let’s go! 🧳✨
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+
+## 🚀 Dockerizing TravelHues App
+
+### 🏗️ Setting Up for Production
+
+1. **Build the Docker Image:**  
+   ```sh
+   docker build -t travelhues-app .
+   ```
+
+2. **Run the Container:**  
+   ```sh
+   docker run -p 8080:80 travelhues-app
+   ```
+   Your app should now be live at **http://localhost:8080** 🎉
+
+### 🔧 Setting Up for Development (Hot Reload)
+
+1. **Build & Start the Dev Container:**  
+   ```sh
+   docker-compose up --build
+   ```
+
+2. The app will be available on **http://localhost:5173** 🔥
+
+### 📂 `.dockerignore` File
+Make sure to include this to keep the build clean:
+```
+node_modules
+dist
+.git
+.DS_Store
+.env
+```
