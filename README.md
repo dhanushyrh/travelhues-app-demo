@@ -82,6 +82,20 @@ To maintain a structured workflow, we follow **GitFlow** for version control:
 - **`hotfix/{fix-name}`** – Critical fixes applied directly to `main`, then merged into `develop`.
 
 ### 🚀 Workflow:
+```mermaid
+graph TD;
+    A[main] -->|Branch off| B(develop);
+    B -->|Feature branch| C(feature/{feature-name});
+    C -->|Merge back| B;
+    B -->|Create release| D(release/{version});
+    D -->|Test & Fixes| D;
+    D -->|Merge to main| A;
+    A -->|Hotfix if needed| E(hotfix/{fix-name});
+    E -->|Merge to main & develop| A & B;
+```
+
+
+### >_ Commands:
 1. **Starting a Feature:**
    ```sh
    git checkout develop
