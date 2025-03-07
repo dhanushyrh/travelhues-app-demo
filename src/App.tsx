@@ -1,10 +1,22 @@
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import { AppRoutes } from "./routes";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <p className="read-the-docs">Welcome to TravelHues</p>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
+      <AppRoutes />
     </>
   );
 }
