@@ -54,6 +54,9 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
       fontFamily: {
         sans: ["Poppins", "sans-serif"], // Default body font
         heading: ["Sora", "sans-serif"], // Headings font

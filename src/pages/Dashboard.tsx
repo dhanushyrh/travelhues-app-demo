@@ -1,12 +1,25 @@
+import Features from "@/components/pages/home/Features";
+import GridWall from "@/components/pages/home/GridWall";
+import Hero from "@/components/pages/home/Hero";
+import Stats from "@/components/pages/home/Stats";
+import Testimonials from "@/components/pages/home/Testimonial";
+
 export const Dashboard = () => {
   return (
     <>
-      <h1 className="text-3xl text-primary font-bold font-sora ">
-        Hello User!
-      </h1>
-      <p className="read-the-docs color-text font-poppins text-text-medium">
-        Welcome to TravelHues
-      </p>
+      <section id="Hero" className="Hero">
+        {/* Hero Section */}
+        <Hero />
+      </section>
+      <section id="Feature">
+        {/* Feature Section */}
+        <Features />
+      </section>
+      <section>
+        <GridWall />
+      </section>
+        <Stats />
+        <Testimonials />
     </>
   );
 };

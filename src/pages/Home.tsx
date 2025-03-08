@@ -1,21 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { toast } from "react-toastify";
+import { HomeLayout } from "@/components/layout/HomeLayout";
+import Products from "@/components/pages/discover/Products";
+import Features from "@/components/pages/home/Features";
+import GridWall from "@/components/pages/home/GridWall";
+import Stats from "@/components/pages/home/Stats";
+import { Hero } from "@/components/pages/home/Test";
+import Testimonials from "@/components/pages/home/Testimonial";
 
-export function Home() {
+export const Home = () => {
   return (
-    <div className="p-10">
-      <h1 className="text-3xl text-primary font-bold font-sora ">
-        Hello world!
-      </h1>
-      <p className="read-the-docs color-text font-poppins text-text-medium">
-        Welcome to TravelHues
-      </p>
-      <Button
-        onClick={() => toast.success("Test Success")}
-        className="bg-red-500 text-white p-2 rounded-md"
-      >
-        Toast
-      </Button>
-    </div>
+    <HomeLayout>
+      <section id="Hero" className="Hero">
+        {/* Hero Section */}
+        <Hero />
+      </section>
+      <section id="Feature">
+        {/* Feature Section */}
+        <Features />
+      </section>
+      <Products />
+      <Products />
+      <section>
+        <GridWall />
+        <Stats />
+        <Testimonials />
+
+      </section>
+    </HomeLayout>
   );
-}
+};

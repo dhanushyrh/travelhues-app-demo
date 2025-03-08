@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import  {Home}  from "@/pages/Home";
+// import  {Home}  from "@/pages/Home";
 import {About} from "@/pages/About";
 import { Login } from "@/pages/Auth/Login";
-import { Dashboard } from "@/pages/Dashboard";
 import { PrivateRoute } from "./ProtectedeRoutes";
+import { Dashboard } from "@/pages/Dashboard";
+import NotFound from "@/pages/404NotFound";
+import { Home } from "@/pages/Home";
+import Discover from "@/pages/Discover";
 
 export function AppRoutes() {
   return (
@@ -13,6 +16,7 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/discover" element={<Discover />} />
 
         {/* Protected Routes */}
         <Route element={<PrivateRoute />}>
@@ -20,7 +24,7 @@ export function AppRoutes() {
         </Route>
 
         {/* Not Found */}
-        <Route path="*" element={<h1>404 - Not Found</h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

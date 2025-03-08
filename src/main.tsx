@@ -8,7 +8,7 @@ import { ErrorBoundary } from "./components/common/ErrorBoundary.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <ErrorBoundary>
         <AuthProvider>
           <App />
