@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Hero() {
   return (
     <section className="relative  isolate  w-full">

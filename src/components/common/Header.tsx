@@ -8,8 +8,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Product", href: "/discover" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
+  { name: "Features", href: "/dashboard" },
+  { name: "Marketplace", href: "/dashboard/services/create" },
   { name: "Company", href: "#" },
 ];
 
@@ -24,7 +24,7 @@ export default function Headers() {
         className="flex items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">TravelHues</span>
             <img
               alt=""

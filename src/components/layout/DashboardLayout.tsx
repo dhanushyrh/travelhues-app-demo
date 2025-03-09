@@ -1,16 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
-  HomeIcon, UsersIcon, CalendarIcon, DocumentIcon, ChartPieIcon, PuzzlePieceIcon
+  HomeIcon, UsersIcon, CalendarIcon, ChartPieIcon, PuzzlePieceIcon, TrophyIcon, CurrencyDollarIcon, ForwardIcon
 } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: HomeIcon },
-  { name: "Stories", href: "/dashboard/stories", icon: UsersIcon },
+  { name: "Stories", href: "/dashboard/stories", icon: ForwardIcon },
   { name: "Services", href: "/dashboard/services", icon: PuzzlePieceIcon },
   { name: "Bookings", href: "/dashboard/bookings", icon: CalendarIcon },
-  { name: "Payments", href: "/dashboard/payments", icon: DocumentIcon },
-  { name: "Reports", href: "/dashboard/reports", icon: ChartPieIcon },
+  { name: "Payments", href: "/dashboard/payments", icon: CurrencyDollarIcon },
+  { name: "Analytics", href: "/dashboard/reports", icon: ChartPieIcon },
+  { name: "Achievements", href: "/dashboard/achievements", icon: TrophyIcon },
+  { name: "Profile", href: "/dashboard/profile", icon: UsersIcon },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -48,7 +50,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-6 overflow-y-auto">
+      <div className="flex-1 bg-white p-6 overflow-y-auto">
         <div className=" border-gray-300 rounded-lg h-full flex  ">
           {children}
         </div>
