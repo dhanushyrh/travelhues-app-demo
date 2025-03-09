@@ -16,8 +16,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   isPublic,
   views,
   bookings,
-  earnings,
-  conversion,
 }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow flex justify-between items-start w-full">
